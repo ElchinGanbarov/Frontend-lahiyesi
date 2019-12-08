@@ -1,0 +1,240 @@
+#alertbox {
+    background-color: $color-danger;
+}
+
+.text {
+    color: $header-text-color;
+    font-weight: bold;
+    font-family: $primary-font;
+
+    a {
+        color: $header-text-color;
+        text-decoration: underline;
+    }
+
+    .close {
+        float: none;
+        margin-left: 10px;
+
+        line-height: 1;
+        text-shadow: 0 1px 0 $header-text-color;
+        opacity: .5;
+        font-size: 20px;
+        color: $header-text-color;
+        font-family: $primary-font;
+        @include transition(all 0.5s);
+
+        &:hover {
+            opacity: .75;
+        }
+
+        i {
+            font-size: 17px;
+        }
+    }
+}
+
+#header-box {
+    padding: 10px 0;
+
+    .item {
+        display: inline;
+        font-size: 14px;
+
+        a {
+            color: $header-text-color;
+            @include transition(all 0.3s);
+
+            &:hover {
+                color: $color-danger;
+            }
+
+            &:hover {
+                text-decoration: none;
+                color: $color-danger;
+            }
+
+            i {
+                padding: 0px 10px;
+            }
+        }
+    }
+
+    ul.list-group-horizantal {
+        margin: 0;
+        padding-top: 5px;
+        list-style-type: none;
+
+        li {
+            display: inline;
+            padding-right: 15px;
+            font-size: 14px;
+            position: relative;
+
+            &:last-child::after {
+                content: "";
+                position: absolute;
+                height: 22px;
+                width: 1px;
+                top: 0px;
+                right: 1px;
+                background-color: $header-text-color;
+
+            }
+
+            a {
+                i {
+                    color: $header-text-color;
+                    @include transition(all 0.3s);
+
+                    &:hover {
+                        color: $color-warning;
+                    }
+                }
+
+            }
+        }
+    }
+
+    ul.list-style-login {
+        list-style-type: none;
+        margin: 0;
+        padding: 0 5px;
+
+        li {
+            display: inline;
+            padding: 5px;
+
+            a {
+                font-family: $primary-font;
+                font-size: 14px;
+                color: $header-text-color;
+                @include transition(all 0.3s);
+
+                &:hover {
+                    text-decoration: none;
+                    color: $color-warning;
+                }
+            }
+
+
+        }
+    }
+}
+
+#edu-global {
+    .navbar {
+        padding: 0;
+
+        .collapse {
+            .navbar-nav {
+
+                .nav-item {
+                    &:first-child {
+                        a.nav-link {
+                            color: $color-warning;
+                        }
+                    }
+
+                    font-size: 14px;
+                    font-weight: 600;
+                    padding: 10px 5px;
+                    text-transform: uppercase;
+
+                    a {
+                        text-transform: initial;
+                        font-family: $secondary-font;
+                        color: $primary-black-color;
+                        @include transition(all 0.4s);
+
+                        &::after {
+                            content: initial;
+                        }
+
+                        &:hover {
+                            color: $color-warning;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .dropdown-menu {
+            border-radius: 0;
+            padding: 0;
+            margin: -1px;
+            z-index: 99;
+
+            a {
+                margin-top: 4px;
+                padding: 0 9px;
+                min-width: 12em;
+                color: $secondary-black-color;
+                font-size: 14px;
+            }
+        }
+
+        .galerry {
+            .galery-menu {
+                position: relative;
+
+                i {
+                    position: absolute;
+                    right: 7px;
+                }
+
+            }
+
+            .dropdown-menu {
+                position: absolute;
+                left: 100%;
+                top: 22px;
+                font-size: 14px;
+                font-family: $primary-font;
+            }
+        }
+
+        .search-menu {
+            margin-left: -140px;
+            z-index: 1;
+            padding: 8px;
+            width: 200px;
+
+
+            .form-control {
+                display: block;
+                width: 100%;
+                position: relative;
+                padding: 100px 20px;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #495057;
+                background-color: #fff;
+                background-clip: padding-box;
+                border: 1px solid #ced4da;
+                border-radius: .25rem;
+                transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                border-radius: 0;
+                padding: 10px;
+                height: auto;
+
+            }
+
+            .search_icon {
+                font-size: 26px;
+                position: absolute;
+                right: 15px;
+                top: 20px;
+                border: 0;
+                background-color: transparent;
+                cursor: pointer;
+                padding: 0;
+                font-size: 14px;
+
+            }
+        }
+    }
+}
+

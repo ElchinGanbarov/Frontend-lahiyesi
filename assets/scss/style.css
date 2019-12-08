@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Rubik&display=swap");
+#alertbox {
+  background-color: #dc3545;
+}
+
+.text {
+  color: #fff;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.text a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.text .close {
+  float: none;
+  margin-left: 10px;
+  line-height: 1;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+  font-size: 20px;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+}
+
+.text .close:hover {
+  opacity: .75;
+}
+
+.text .close i {
+  font-size: 17px;
+}
+
+#header-box {
+  padding: 10px 0;
+}
+
+#header-box .item {
+  display: inline;
+  font-size: 14px;
+}
+
+#header-box .item a {
+  color: #fff;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+}
+
+#header-box .item a:hover {
+  color: #dc3545;
+}
+
+#header-box .item a:hover {
+  text-decoration: none;
+  color: #dc3545;
+}
+
+#header-box .item a i {
+  padding: 0px 10px;
+}
+
+#header-box ul.list-group-horizantal {
+  margin: 0;
+  padding-top: 5px;
+  list-style-type: none;
+}
+
+#header-box ul.list-group-horizantal li {
+  display: inline;
+  padding-right: 15px;
+  font-size: 14px;
+  position: relative;
+}
+
+#header-box ul.list-group-horizantal li:last-child::after {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 1px;
+  top: 0px;
+  right: 1px;
+  background-color: #fff;
+}
+
+#header-box ul.list-group-horizantal li a i {
+  color: #fff;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+}
+
+#header-box ul.list-group-horizantal li a i:hover {
+  color: #ffc107;
+}
+
+#header-box ul.list-style-login {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 5px;
+}
+
+#header-box ul.list-style-login li {
+  display: inline;
+  padding: 5px;
+}
+
+#header-box ul.list-style-login li a {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  color: #fff;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+}
+
+#header-box ul.list-style-login li a:hover {
+  text-decoration: none;
+  color: #ffc107;
+}
+
+#edu-global .navbar {
+  padding: 0;
+}
+
+#edu-global .navbar .collapse .navbar-nav .nav-item {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 5px;
+  text-transform: uppercase;
+}
+
+#edu-global .navbar .collapse .navbar-nav .nav-item:first-child a.nav-link {
+  color: #ffc107;
+}
+
+#edu-global .navbar .collapse .navbar-nav .nav-item a {
+  text-transform: initial;
+  font-family: "Rubik", sans-serif;
+  color: #333333;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+#edu-global .navbar .collapse .navbar-nav .nav-item a::after {
+  content: initial;
+}
+
+#edu-global .navbar .collapse .navbar-nav .nav-item a:hover {
+  color: #ffc107;
+}
+
+#edu-global .navbar .dropdown-menu {
+  border-radius: 0;
+  padding: 0;
+  margin: -1px;
+  z-index: 99;
+}
+
+#edu-global .navbar .dropdown-menu a {
+  margin-top: 4px;
+  padding: 0 9px;
+  min-width: 12em;
+  color: #6b6b6b;
+  font-size: 14px;
+}
+
+#edu-global .navbar .galerry .galery-menu {
+  position: relative;
+}
+
+#edu-global .navbar .galerry .galery-menu i {
+  position: absolute;
+  right: 7px;
+}
+
+#edu-global .navbar .galerry .dropdown-menu {
+  position: absolute;
+  left: 100%;
+  top: 22px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+#edu-global .navbar .search-menu {
+  margin-left: -140px;
+  z-index: 1;
+  padding: 8px;
+  width: 200px;
+}
+
+#edu-global .navbar .search-menu .form-control {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 100px 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  border-radius: 0;
+  padding: 10px;
+  height: auto;
+}
+
+#edu-global .navbar .search-menu .search_icon {
+  font-size: 26px;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+}
+
+.btn {
+  padding: 5px;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  width: 2em;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -44px;
+  -webkit-transform: skewX(-45deg) translateX(0);
+  transform: skewX(-45deg) translateX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover::before {
+  left: 90px;
+}
+
+#carusel-slide {
+  position: relative;
+}
+
+#carusel-slide .carousel-item {
+  height: 470px;
+  position: relative;
+}
+
+#carusel-slide .carousel-item::before {
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 470px;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+#carusel-slide .carousel-item .item {
+  padding: 180px;
+}
+
+#carusel-slide .carousel-item .item h2 {
+  font-size: 44px;
+  margin-bottom: 20px;
+  vertical-align: bottom;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  opacity: 0;
+}
+
+@-webkit-keyframes example {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes example {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#carusel-slide .carousel-item .item p {
+  color: white;
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  opacity: 0;
+}
+
+@keyframes example {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#carusel-slide .carousel-item .item .btn {
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  opacity: 0;
+  background-color: #ffc107;
+  padding: 10px 20px;
+}
+
+@keyframes example {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#carusel-slide .carousel-item .item .btn:hover {
+  color: white;
+  background-color: #d39e00;
+}
+
+#carusel-slide .carousel-item .item .btn:hover::before {
+  left: 130px;
+}
+
+#carusel-slide .carousel-item .item .btns {
+  -webkit-animation-name: example;
+          animation-name: example;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  opacity: 0;
+  border: 1px solid #fff;
+  color: white;
+  padding: 9px 20px;
+  border-radius: 3px;
+  margin-left: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: transparent;
+}
+
+@keyframes example {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#carusel-slide .carousel-item .item .btns::before {
+  content: "";
+  background-color: #fff;
+  height: 100%;
+  width: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+#carusel-slide .carousel-item .item .btns:hover {
+  text-decoration: none;
+  color: #ffc107;
+}
+
+#carusel-slide .carousel-item .item .btns:hover::before {
+  left: 0%;
+  right: initial;
+  width: 100%;
+}
+
+#carusel-slide .carousel-control-prev-icon, #carusel-slide .carousel-control-next-icon {
+  position: absolute;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: none;
+  line-height: 55px;
+  text-align: center;
+  font-size: 30px;
+  top: 50%;
+}
+
+#carusel-slide .carousel-control-prev-icon {
+  left: 15px;
+}
+
+#carusel-slide .carousel-control-next-icon {
+  right: 15px;
+}
+/*# sourceMappingURL=style.css.map */
