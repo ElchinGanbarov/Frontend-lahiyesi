@@ -47,6 +47,11 @@
 .light-green{
     color: #B3D369;
 }
+.darken_bg{
+    background-color: #eee;
+}
+.color-b{
+    color:#292b2c;}
 
 .color-info-bg{
     background-color:#d1ecf1 !important;
@@ -62,4 +67,147 @@ h6 {
     margin-bottom: .5rem;
     font-weight:500;
     line-height: 1.2;
+}
+
+
+.courses-item {
+    background-color: #fff;
+    margin-top: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 348px;
+    border-radius: 10px;
+
+
+.courses-img {
+
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+
+    img {
+        @include transition (all 0.5s);
+
+
+    }
+}
+
+.courses-text {
+    position: relative;
+    padding: 10px;
+    font-size: 15px;
+    text-align: left;
+
+    a {
+        color: $text-header !important;
+        @include transition(all 0.4s);
+
+        &:hover {
+            text-decoration: none;
+            color: $color-warning !important;
+
+        }
+    }
+
+    h4 {
+        margin-bottom: .5rem;
+        font-weight: 500;
+        line-height: 1.2;
+        font-size: 17px;
+
+    }
+
+    p {
+        color: $text-title;
+        margin-bottom: 10px;
+        font-weight: 400;
+        line-height: 1.5;
+        font-family: $primary-font;
+
+    }
+}
+
+.courses-icon {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+
+    .courses-star {
+        i {
+            color: $color-warning;
+            font-size: 12px;
+        }
+    }
+
+    .courses-user {
+        i {
+            padding-right: 7px;
+            font-size: 14px;
+        }
+
+        span {
+            font-size: 14px;
+        }
+
+        a {
+            margin-right: 10px;
+        }
+    }
+}
+
+.courses-footer {
+    border-top: 1px solid #ddd;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 15px;
+    width: 100%;
+
+    .img {
+        img {
+            border-radius: 100%;
+            max-width: 40px;
+            margin-right: 10px;
+        }
+
+        a {
+            color: $text-header !important;
+            @include transition(all 0.5s);
+
+            &:hover {
+                color: $color-warning !important;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .button {
+        span {
+            margin: 0;
+            padding: 5px 15px;
+            display: block;
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            border-radius: 5px;
+            font-size: 14px;
+            font-family: $primary-font !important;
+        }
+    }
+}
+
+.view {
+    background-color: $color-warning;
+    padding: 10px 30px;
+
+    &:hover {
+        color: #fff !important;
+        background-color: darken($color-warning, 10);
+
+        &::before {
+            left: 200px
+        }
+    }
+
+
+}
 }

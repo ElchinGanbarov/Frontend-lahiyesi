@@ -72,4 +72,15 @@ $(document).ready(function () {
                      })
            })
         }
+       $(".text-center a").click(function(e){
+          e.preventDefault()
+          $('.grid').isotope({
+            // options
+            itemSelector: '.grid-item',
+         
+          });
+          });
+          
+           
+    
 })
