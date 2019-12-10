@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    //WINDOW SCROLLED NAVBAR FIXED TOP
     $(window).scroll(function () {
         if ($("html").scrollTop() > 200) {
             $("#edu-global").addClass("fixed-top");
@@ -7,6 +8,7 @@ $(document).ready(function () {
             $("#edu-global").removeClass("fixed-top");
         }
     }); 
+    //ALERT-BOX CLOSED
     $(".close").click(function () {
         $("#alertbox").addClass("d-none")
         $("#header").css("padding-top", "0")
@@ -35,6 +37,7 @@ $(document).ready(function () {
             $(this).parent().next().removeClass("d-block")
         }
     })
+    // JS CARUSEL-SLIDE
     if($("#carusel-slide").length){
         $("#carusel-slide").hover(function () {
             $(this).find(".carousel-control-prev-icon").addClass("d-block");
@@ -54,13 +57,14 @@ $(document).ready(function () {
             autoplaySpeed: 3000,       
     })
     }
+    // JS COUNTER-UP
         if($(".counter")){
             $(".counter").counterUp({
                 time: 1500,
                 
             });
         }
-       
+       // JS IMG SCALE
         if($(".courses-item").length){
            $(".courses-item").hover(function(){
             $(this).find(".courses-img img").css({
@@ -72,15 +76,33 @@ $(document).ready(function () {
                      })
            })
         }
-       $(".text-center a").click(function(e){
-          e.preventDefault()
-          $('.grid').isotope({
-            // options
-            itemSelector: '.grid-item',
-         
-          });
+        $('.text-center').on( 'click', 'a', function(e) {
+            e.preventDefault()
+            var filterValue = $( this ).attr('data-filter');
+            // use filterFn if matches value
+            // filterValue = filterFns[ filterValue ] || filterValue;
+            $(".grid").isotope({ filter: filterValue });
           });
           
-           
+          $(".our-teacher-item").hover(function(){
+              $(this).find(".listed").css({
+                  "opacity":"1",
+                  "top":"50%"
+              })
+          },function(){
+            $(this).find(".listed").css({
+                "opacity":"0",
+                "top":"100%"
+            })
+          })
+         
+    // JS IMG-SLIDER
+            $('.slider').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                autoplay:true,
+                autoplaySpeed: 3000,  
+        })
+        
     
 })

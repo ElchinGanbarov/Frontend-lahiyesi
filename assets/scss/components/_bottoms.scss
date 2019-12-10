@@ -27,3 +27,47 @@
    }
 
 }
+.circle {
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    color: #FFBC09;
+    position: relative;
+    display: inline-block;
+    margin-right: 25px;
+    line-height: 50px;
+    font-size: 18px !important;
+    vertical-align: middle;
+    margin-left: 0;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+
+
+    &::before {
+        animation: ripple 1.4s infinite;
+        background-color: #ffffff;
+        border-radius: 100%;
+        margin: -20px;
+        bottom: 0px;
+        content: "";
+        display: block;
+        left: 0px;
+        opacity: 0;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        z-index: 1;
+        animation-delay: 0.4s;
+
+
+        @keyframes ripple {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 0.5;
+            }
+        }
+    }
+}
