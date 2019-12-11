@@ -1,3 +1,57 @@
+.btns {
+    animation-name: example;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    opacity: 0;
+
+    @keyframes example {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    border: 1px solid $header-text-color;
+    color: white;
+    padding: 9px 20px;
+    border-radius: 3px;
+    margin-left: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-color: transparent;
+
+    &::before {
+        content: "";
+        background-color: $header-text-color;
+        height: 100%;
+        width: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        @include transition(all 0.4s)
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: $color-warning;
+
+        &::before {
+            left: 0%;
+            right: initial;
+            width: 100%;
+        }
+    }
+
+
+}
+
 .btn {
     padding: 5px;
     font-size: 14px;
