@@ -330,8 +330,8 @@
             top: 0;
             left: 0;
             background-color: black;
-            width: 598px;
-            height: 398px;
+            width: 100%;
+            height:100%;
             opacity: 0.3;
         }
     }
@@ -382,6 +382,19 @@
 
         }
 
+    }
+    .view {
+        background-color: $color-warning;
+        padding: 10px 30px;
+    
+        &:hover {
+            color: #fff !important;
+            background-color: darken($color-warning, 10);
+    
+            &::before {
+                left: 200px
+            }
+        }
     }
 
 }
