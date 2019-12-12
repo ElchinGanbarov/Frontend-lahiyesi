@@ -2,7 +2,7 @@
     li{
         margin-right:5px;
         a{
-            @include transition(all 0.3s)
+            @include transition(all 0.3s);
             color: $text-header;
             border-radius:5px;
             &:hover{

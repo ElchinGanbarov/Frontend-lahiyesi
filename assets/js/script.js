@@ -126,6 +126,11 @@ $(document).ready(function () {
         body.stop().animate({ scrollTop: 0 }, 500, 'swing', function () {
         });
     })
+   $(".rating i").click(function(){
+       $(this).toggleClass("orange")
+   })
 
 
+    
+    
 })
