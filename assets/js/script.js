@@ -55,6 +55,16 @@ $(document).ready(function () {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 3000,
+            responsive: [
+
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
         })
     }
     // JS COUNTER-UP
@@ -98,10 +108,20 @@ $(document).ready(function () {
 
     // JS IMG-SLIDER
     $('.slider').slick({
-        slidesToShow: 2,
+        slidesToShow:2,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
+        responsive: [
+
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     })
 
     $(".our-blog-item").hover(function () {
@@ -126,11 +146,26 @@ $(document).ready(function () {
         body.stop().animate({ scrollTop: 0 }, 500, 'swing', function () {
         });
     })
-   $(".rating i").click(function(){
-       $(this).toggleClass("orange")
-   })
-
-
+    $(".rating i").click(function () {
+        $(this).toggleClass("orange")
+    })
+   
+    $(window).scroll( function(){
     
+        /* Check the location of each desired element */
+        $('section').each( function(i){
+            
+            var bottom_of_object = $(this).position().top;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},3000);
+                    
+            }
+            
+        }); 
     
+    });
+
 })

@@ -94,7 +94,7 @@
                 }
             }
 
-           
+
         }
     }
 
@@ -331,7 +331,7 @@
             left: 0;
             background-color: black;
             width: 100%;
-            height:100%;
+            height: 100%;
             opacity: 0.3;
         }
     }
@@ -383,14 +383,15 @@
         }
 
     }
+
     .view {
         background-color: $color-warning;
         padding: 10px 30px;
-    
+
         &:hover {
             color: #fff !important;
             background-color: darken($color-warning, 10);
-    
+
             &::before {
                 left: 200px
             }
@@ -401,20 +402,19 @@
 
 //PARALLAX_BG
 #parallax_bg {
-    padding: 135px 0;
+    padding: 100px 0;
     width: 100%;
     position: relative;
     background: transparent;
     overflow: hidden;
     z-index: 1;
-    top: -70px;
 
     &:before {
         content: "";
         position: absolute;
         background-color: rgba(7, 41, 77, 0.70);
         opacity: 1;
-        height: 285px;
+        height: 250px;
         width: 100%;
         top: 0;
         left: 0;
@@ -438,7 +438,7 @@
         position: relative;
         z-index: 999 !important;
         opacity: 1;
-        top: -50%;
+        top: -50px;
 
         .counter_img {
             color: $header-text-color;
@@ -759,22 +759,21 @@
 
 //OUR-TEACHERS
 #our-teachers {
-    height: 600px;
+    height: 100% !important;
     width: 100%;
     position: relative;
     background: transparent;
-    overflow: hidden;
     z-index: 1;
 
     &:before {
         content: "";
         position: absolute;
         background-color: rgba(7, 41, 77, 0.70);
-        opacity: 1;
-        height: 843px;
+        height: 100% !important;
         width: 1349px;
         top: 0;
         left: 0;
+
     }
 
     .our-teachers {
@@ -784,10 +783,11 @@
         background-repeat: no-repeat;
         background-size: cover;
         width: 1349px;
-        height: 963px;
-        transform: translate3d(0px, -311.625px, 0px);
-        transition: transform 100ms ease 0s;
+        height: 1069px !important;
+        top: 47%;
+        left: 0;
         z-index: -1;
+        overflow: hidden;
     }
 
     .our-teacher-text {
@@ -1205,9 +1205,7 @@
     }
 
     .slick-slide {
-        margin: 5px;
-        width: 160px !important;
-
+        margin-right: 5px;
     }
 
     .owl-carousel {
@@ -1235,7 +1233,7 @@
             font-family: $secondary-font;
             font-size: 2rem;
             margin-bottom: 1rem;
-            font-weight:bold;
+            font-weight: bold;
             line-height: 1.2;
         }
 
@@ -1245,9 +1243,414 @@
             margin-bottom: 1rem;
         }
     }
-    .btns{
+
+    .btns {
         position: absolute;
         right: 20px;
         top: -20px;
     }
+}
+
+.fade{
+    animation-name: section;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    opacity: 0;
+    @include transition(all 0.1s);
+
+    @keyframes section {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+}
+}
+section{
+    opacity: 0;
+}
+
+
+@media only screen and (max-width: 675px) {
+    body {
+        margin-left: 0;
+    }
+    #header-box {
+        .res-col-md-6 {
+            margin-left: 32px !important;
+        }
+
+        .list-style-login {
+            a {
+                font-size: 11px !important;
+            }
+        }
+    }
+
+    #carusel-slide {
+        padding: 0;
+
+        .carousel-item {
+            padding: 30px 0;
+        }
+
+        .item {
+            text-align: center;
+            padding: 0 !important;
+            padding-top: 50% !important;
+
+            p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 20px !important;
+                margin-bottom: 10px !important;
+
+            }
+
+        }
+    }
+
+    #most-popular {
+        .owl-item {
+            .single {
+                padding: 5px;
+
+            }
+        }
+    }
+
+    #about-us {
+        .box-shadow {
+            padding: 25px 5%;
+            border-radius: 0 !important;
+        }
+    }
+
+    #parallax_bg {
+        .parallax_bg {
+            height: 488px;
+        }
+
+        .box_counter {
+            margin-top: 9px;
+        }
+
+        padding: 30px 0 !important;
+
+        .counter_img {
+            img {
+                margin: 0 !important;
+            }
+        }
+
+        .counter_content {
+            h3 {
+                margin: 0 !important;
+            }
+
+            span {
+                font-size: 16px !important;
+            }
+        }
+    }
+
+    #register-now {
+        padding: 0 !important;
+        margin: 0 !important;
+
+        .text-center {
+            padding-top: 50px;
+        }
+    }
+
+    #our-galerry {
+        .galerry-button {
+            a {
+                margin: 5px 3px;
+                width: 47%;
+            }
+        }
+
+        .grid {
+            margin: 0 !important;
+
+            .element-item {
+                width: 100%;
+            }
+        }
+    }
+
+    #our-teachers {
+        margin: 0 !important;
+
+        .row {
+            margin: 0 !important;
+        }
+
+        .our-teacher-item {
+            margin: 4px !important;
+
+            .our-teacher-img {
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #student-say {
+        .row {
+            margin: 0 !important;
+        }
+
+        .slide {
+            margin: -18px !important;
+
+            .student-img {
+                margin-left: -50px !important;
+            }
+
+            .student-text {
+                padding-left: 50px !important;
+            }
+        }
+
+    }
+
+    #our-client {
+        padding-top: 0 !important;
+        .owl-carousel {
+            .slick-slid {
+                margin: 0 !important;
+            }
+
+            img {
+                width: 90px !important;
+            }
+        }
+    }
+    #our-blog{
+        padding-bottom: 0 !important;
+    }
+    #bg_warning {
+        padding-top: 20px !important;
+        .bg_warning-text {
+            h2 {
+                font-size: 24px !important;
+            }
+        }
+        .btns {
+            right: 220px !important;
+            top: -5px !important;
+        }
+    }
+    #top-footer{
+        padding-top: 20px !important;
+    }
+    .footer-item{
+        margin:  0 !important;
+    }
+
+}
+    
+
+
+@media only screen and (max-width: 479px) {
+    body {
+        margin-left: 0;
+    }
+    #header-box {
+        .res-col-md-6 {
+            margin-left: 32px !important;
+        }
+
+        .list-style-login {
+            a {
+                font-size: 11px !important;
+            }
+        }
+    }
+
+    #carusel-slide {
+        padding: 0;
+
+        .carousel-item {
+            padding: 30px 0;
+        }
+
+        .item {
+            text-align: center;
+            padding: 0 !important;
+            padding-top: 50% !important;
+
+            p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 20px !important;
+                margin-bottom: 10px !important;
+
+            }
+
+        }
+    }
+
+    #most-popular {
+        .owl-item {
+            .single {
+                padding: 5px;
+
+            }
+        }
+    }
+
+    #about-us {
+        .box-shadow {
+            padding: 25px 5%;
+            border-radius: 0 !important;
+        }
+    }
+
+    #parallax_bg {
+        .parallax_bg {
+            height: 488px;
+        }
+
+        .box_counter {
+            margin-top: 9px;
+        }
+
+        padding: 30px 0 !important;
+
+        .counter_img {
+            img {
+                margin: 0 !important;
+            }
+        }
+
+        .counter_content {
+            h3 {
+                margin: 0 !important;
+            }
+
+            span {
+                font-size: 16px !important;
+            }
+        }
+    }
+
+    #register-now {
+        padding: 0 !important;
+        margin: 0 !important;
+
+        .text-center {
+            padding-top: 50px;
+        }
+    }
+
+    #our-galerry {
+        .galerry-button {
+            a {
+                margin: 5px 3px;
+                width: 47%;
+            }
+        }
+
+        .grid {
+            margin: 0 !important;
+
+            .element-item {
+                width: 100%;
+            }
+        }
+    }
+
+    #our-teachers {
+        margin: 0 !important;
+
+        .row {
+            margin: 0 !important;
+        }
+
+        .our-teacher-item {
+            margin: 4px !important;
+
+            .our-teacher-img {
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #student-say {
+        .row {
+            margin: 0 !important;
+        }
+
+        .slide {
+            margin: -18px !important;
+
+            .student-img {
+                margin-left: -50px !important;
+            }
+
+            .student-text {
+                padding-left: 50px !important;
+            }
+        }
+
+    }
+
+    #our-client {
+        padding-top: 0 !important;
+        .owl-carousel {
+            .slick-slid {
+                margin: 0 !important;
+            }
+
+            img {
+                width: 90px !important;
+            }
+        }
+    }
+    #our-blog{
+        padding-bottom: 0 !important;
+    }
+    #bg_warning {
+        padding-top: 20px !important;
+        .bg_warning-text {
+            h2 {
+                font-size: 24px !important;
+            }
+        }
+        .btns {
+            right: 220px !important;
+            top: -5px !important;
+        }
+    }
+    #top-footer{
+        padding-top: 20px !important;
+    }
+    .footer-item{
+        margin:  0 !important;
+    }
+    .resent-post{
+        .url-content{
+            h6{
+              
+            }
+        }
+    }
+
 }
