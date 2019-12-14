@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     //WINDOW SCROLLED NAVBAR FIXED TOP
     $(window).scroll(function () {
@@ -48,13 +49,15 @@ $(document).ready(function () {
             $(this).find(".carousel-control-next-icon").removeClass("d-block");
         })
     }
-
+    // SLIDE OWl-CARUSEl
     if ($(".owl-carousel").length) {
         $('.owl-carousel').slick({
             slidesToShow: 6,
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 3000,
+           
+           //RESPONSIVE
             responsive: [
 
                 {
@@ -63,7 +66,15 @@ $(document).ready(function () {
                         slidesToShow: 3,
                         slidesToScroll: 1,
                     }
+                },
+                {
+                    breakpoint: 996,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    }
                 }
+                
             ]
         })
     }
@@ -112,6 +123,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
+        //RESPONSIVE
         responsive: [
 
             {
@@ -120,7 +132,15 @@ $(document).ready(function () {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 }
+            },
+            {
+                breakpoint: 996,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
             }
+            
         ]
     })
 
@@ -148,24 +168,44 @@ $(document).ready(function () {
     })
     $(".rating i").click(function () {
         $(this).toggleClass("orange")
-    })
+    })   
+
    
+
+   if($("section").length || $("html").scrollTop!=0){
     $(window).scroll( function(){
     
         /* Check the location of each desired element */
         $('section').each( function(i){
             
-            var bottom_of_object = $(this).position().top;
+            var bottom_of_object = $(this).position().top ;
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-
+            
+            /* If the object is completely visible in the window, fade it it */
             if( bottom_of_window > bottom_of_object ){
                 
-                $(this).animate({'opacity':'1'},3000);
+                $(this).animate({'opacity':'1'},1500);
                     
             }
             
         }); 
     
     });
+    
+   }
+
+   $(document).ready(function() {
+    $('section').each( function(i){
+            
+        var bottom_of_object = $(this).position().top ;
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+        
+       
+        if( bottom_of_window > bottom_of_object ){    
+            $(this).animate({'opacity':'1'},1500);        
+        }   
+    }); 
+
+   });
 
 })

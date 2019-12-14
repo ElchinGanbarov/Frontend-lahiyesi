@@ -442,7 +442,6 @@
             list-style-type: none;
             padding: 0 !important;
             margin: 0;
-
             li {
                 display: inline-block;
                 width: 100%;
@@ -453,7 +452,7 @@
                     margin-right: 10px;
                     max-width: 60px;
                 }
-
+                
                 .post_content {
                     a {
                         @include transition(all 0.3s);
@@ -587,6 +586,9 @@
             li {
                 padding-bottom: 15px;
                 line-height: normal;
+                .post_footer{
+                    margin: 5px !important;
+                }
 
                 .post_img {
                     float: left;

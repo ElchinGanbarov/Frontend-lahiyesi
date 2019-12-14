@@ -130,7 +130,7 @@
     position: relative;
     width: 100%;
     background-color: #4633330d;
-
+  
     .edu-text {
         h2 {
             color: $text-header;
@@ -1253,8 +1253,8 @@
 
 .fade{
     animation-name: section;
-    animation-duration: 2s;
-    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
     animation-fill-mode: both;
     opacity: 0;
     @include transition(all 0.1s);
@@ -1273,199 +1273,13 @@ section{
     opacity: 0;
 }
 
-
-@media only screen and (max-width: 675px) {
-    body {
-        margin-left: 0;
-    }
-    #header-box {
-        .res-col-md-6 {
-            margin-left: 32px !important;
-        }
-
-        .list-style-login {
-            a {
-                font-size: 11px !important;
-            }
-        }
-    }
-
-    #carusel-slide {
-        padding: 0;
-
-        .carousel-item {
-            padding: 30px 0;
-        }
-
-        .item {
-            text-align: center;
-            padding: 0 !important;
-            padding-top: 50% !important;
-
-            p {
-                font-size: 16px;
-                margin-bottom: 20px;
-            }
-
-            h2 {
-                font-size: 20px !important;
-                margin-bottom: 10px !important;
-
-            }
-
-        }
-    }
-
-    #most-popular {
-        .owl-item {
-            .single {
-                padding: 5px;
-
-            }
-        }
-    }
-
-    #about-us {
-        .box-shadow {
-            padding: 25px 5%;
-            border-radius: 0 !important;
-        }
-    }
-
-    #parallax_bg {
-        .parallax_bg {
-            height: 488px;
-        }
-
-        .box_counter {
-            margin-top: 9px;
-        }
-
-        padding: 30px 0 !important;
-
-        .counter_img {
-            img {
-                margin: 0 !important;
-            }
-        }
-
-        .counter_content {
-            h3 {
-                margin: 0 !important;
-            }
-
-            span {
-                font-size: 16px !important;
-            }
-        }
-    }
-
-    #register-now {
-        padding: 0 !important;
-        margin: 0 !important;
-
-        .text-center {
-            padding-top: 50px;
-        }
-    }
-
-    #our-galerry {
-        .galerry-button {
-            a {
-                margin: 5px 3px;
-                width: 47%;
-            }
-        }
-
-        .grid {
-            margin: 0 !important;
-
-            .element-item {
-                width: 100%;
-            }
-        }
-    }
-
-    #our-teachers {
-        margin: 0 !important;
-
-        .row {
-            margin: 0 !important;
-        }
-
-        .our-teacher-item {
-            margin: 4px !important;
-
-            .our-teacher-img {
-
-                img {
-                    width: 100%;
-                }
-            }
-        }
-    }
-
-    #student-say {
-        .row {
-            margin: 0 !important;
-        }
-
-        .slide {
-            margin: -18px !important;
-
-            .student-img {
-                margin-left: -50px !important;
-            }
-
-            .student-text {
-                padding-left: 50px !important;
-            }
-        }
-
-    }
-
-    #our-client {
-        padding-top: 0 !important;
-        .owl-carousel {
-            .slick-slid {
-                margin: 0 !important;
-            }
-
-            img {
-                width: 90px !important;
-            }
-        }
-    }
-    #our-blog{
-        padding-bottom: 0 !important;
-    }
-    #bg_warning {
-        padding-top: 20px !important;
-        .bg_warning-text {
-            h2 {
-                font-size: 24px !important;
-            }
-        }
-        .btns {
-            right: 220px !important;
-            top: -5px !important;
-        }
-    }
-    #top-footer{
-        padding-top: 20px !important;
-    }
-    .footer-item{
-        margin:  0 !important;
-    }
-
-}
-    
-
-
 @media only screen and (max-width: 479px) {
     body {
         margin-left: 0;
     }
+    .heading-box{
+        justify-content: flex-start!important;
+    }
     #header-box {
         .res-col-md-6 {
             margin-left: 32px !important;
@@ -1594,6 +1408,7 @@ section{
     }
 
     #student-say {
+        overflow: hidden !important;
         .row {
             margin: 0 !important;
         }
@@ -1645,12 +1460,135 @@ section{
     .footer-item{
         margin:  0 !important;
     }
-    .resent-post{
-        .url-content{
-            h6{
-              
+    
+
+}
+@media only screen and (max-width: 768px){
+    #our-teachers{
+        .our-teacher-img{
+            
+                img{
+                    width: 100% !important;
+                }
+            }
+        
+    }
+    .heading-box{
+        justify-content: flex-start!important;
+    }
+    #header-box {
+        
+        .row{
+            justify-content: center !important;
+        }
+        .res-col-md-6 {
+            margin-left: 32px !important;
+        }
+
+        .list-style-login {
+            a {
+                font-size: 11px !important;
             }
         }
     }
 
+    #carusel-slide {
+        padding: 0;
+
+        .carousel-item {
+            padding: 30px 0;
+        }
+
+        .item {
+            text-align: center;
+            padding: 0 !important;
+            padding-top: 30% !important;
+
+            p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 20px !important;
+                margin-bottom: 10px !important;
+
+            }
+
+        }
+    }
+
+}
+@media only screen and (max-width: 996px){
+    #our-teachers{
+        .our-teacher-img{
+            
+                img{
+                    width: 100% !important;
+                }
+            }
+        
+    }
+    .heading-box{
+        justify-content: flex-start!important;
+    }
+    #header-box {
+        
+        .row{
+            justify-content: center !important;
+        }
+        .res-col-md-6 {
+            margin-left: 32px !important;
+        }
+
+        .list-style-login {
+            a {
+                font-size: 11px !important;
+            }
+        }
+    }
+    .footer-item{
+        margin: 0 !important;
+    }
+    #carusel-slide {
+        padding: 0;
+
+        .carousel-item {
+            padding: 30px 0;
+        }
+
+        .item {
+            text-align: center;
+            padding: 0 !important;
+            padding-top: 20% !important;
+
+            p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 40px !important;
+                margin-bottom: 40px !important;
+
+            }
+
+        }
+    }
+    #our-galerry {
+        .galerry-button {
+            a {
+                margin: 5px 3px;
+                width: 47%;
+            }
+        }
+
+        .grid {
+            margin: 0 !important;
+
+            .element-item {
+                width: 40%;
+            }
+        }
+    }
 }
