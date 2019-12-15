@@ -15,6 +15,8 @@ $(document).ready(function () {
         $("#header").css("padding-top", "0")
 
     })
+
+    // NAV-ITEM HOVER DROPDOWN-MENU ELEMENT SHOW
     $(".nav-item").hover(function () {
         $(this).find(".dropdown-menu").addClass("show");
         $(this).find(".galer").removeClass("show");
@@ -24,6 +26,7 @@ $(document).ready(function () {
     }, function () {
         $(this).find(".dropdown-menu").removeClass("show");
     })
+
     $(".title ").hover(function () {
         $(".galer").addClass("show");
 
@@ -56,8 +59,8 @@ $(document).ready(function () {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 3000,
-           
-           //RESPONSIVE
+
+            //RESPONSIVE
             responsive: [
 
                 {
@@ -74,7 +77,7 @@ $(document).ready(function () {
                         slidesToScroll: 1,
                     }
                 }
-                
+
             ]
         })
     }
@@ -82,7 +85,6 @@ $(document).ready(function () {
     if ($(".counter")) {
         $(".counter").counterUp({
             time: 1500,
-
         });
     }
     // JS IMG SCALE
@@ -97,6 +99,8 @@ $(document).ready(function () {
             })
         })
     }
+
+    //Isotope plugin
     $('.text-center').on('click', 'a', function (e) {
         e.preventDefault()
         var filterValue = $(this).attr('data-filter');
@@ -119,7 +123,7 @@ $(document).ready(function () {
 
     // JS IMG-SLIDER
     $('.slider').slick({
-        slidesToShow:2,
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
@@ -140,17 +144,18 @@ $(document).ready(function () {
                     slidesToScroll: 1,
                 }
             }
-            
+
         ]
     })
-
+  
+    // OUR-BLOG-ITEM HOVER TRANSFORM TRANSLATE
     $(".our-blog-item").hover(function () {
         $(this).find(".circle").css("transform", "translateY(-145px)")
     }, function () {
         $(this).find(".circle").css("transform", "translateY(145px)")
     })
 
-
+    // WINDOW SCROLLED BOTTOM WIEV
     $(window).scroll(function () {
         if ($("html").scrollTop() > 100) {
             $(".scrollup").css("opacity", "1");
@@ -160,52 +165,56 @@ $(document).ready(function () {
         }
     });
 
+    //WINDOW SCROLLED ANIMATED TOP 0
     $(".scrollup").click(function (e) {
         e.preventDefault()
         var body = $("html, body");
         body.stop().animate({ scrollTop: 0 }, 500, 'swing', function () {
         });
     })
+
+    //ICON CLICKED COLOR CHANGE
     $(".rating i").click(function () {
         $(this).toggleClass("orange")
-    })   
+    })
 
-   
 
-   if($("section").length || $("html").scrollTop!=0){
-    $(window).scroll( function(){
-    
-        /* Check the location of each desired element */
-        $('section').each( function(i){
-            
-            var bottom_of_object = $(this).position().top ;
+    // WINDOW SCROLLED ELEMENT SHOW ANIMATED
+    if ($("section").length || $("html").scrollTop != 0) {
+        $(window).scroll(function () {
+
+            /* Check the location of each desired element */
+            $('section').each(function (i) {
+
+                var bottom_of_object = $(this).position().top;
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                /* If the object is completely visible in the window, fade it it */
+                if (bottom_of_window > bottom_of_object) {
+
+                    $(this).animate({ 'opacity': '1' }, 1500);
+
+                }
+
+            });
+
+        });
+
+    }
+
+     // WINDOW REFRESH SECTION ANIMATE SHOW
+    $(document).ready(function () {
+        $('section').each(function (i) {
+
+            var bottom_of_object = $(this).position().top;
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-            
-            /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
-                
-                $(this).animate({'opacity':'1'},1500);
-                    
+
+
+            if (bottom_of_window > bottom_of_object) {
+                $(this).animate({ 'opacity': '1' }, 1500);
             }
-            
-        }); 
-    
+        });
+
     });
-    
-   }
-
-   $(document).ready(function() {
-    $('section').each( function(i){
-            
-        var bottom_of_object = $(this).position().top ;
-        var bottom_of_window = $(window).scrollTop() + $(window).height();
-        
-       
-        if( bottom_of_window > bottom_of_object ){    
-            $(this).animate({'opacity':'1'},1500);        
-        }   
-    }); 
-
-   });
 
 })

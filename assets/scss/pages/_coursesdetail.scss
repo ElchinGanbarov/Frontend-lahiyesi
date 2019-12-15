@@ -395,6 +395,8 @@
     margin-right: -50px !important;
 }
 
+//SIDEBAR CSS   
+
 .sidebar {
     margin-bottom: 15px;
     padding-bottom: 15px;
@@ -587,7 +589,7 @@
                 padding-bottom: 15px;
                 line-height: normal;
                 .post_footer{
-                    margin: 5px !important;
+                    margin: 5px;
                 }
 
                 .post_img {
@@ -605,7 +607,7 @@
                     overflow: hidden;
 
                     h6 {
-                        margin: 0 !important;
+                        margin: 0;
 
                         a {
                             @include transition(all 0.3s);
@@ -675,6 +677,50 @@
                 color: $color-warning;
             }
 
+        }
+    }
+}
+//MOBILE RESPONSIVE
+
+@media only screen and (max-width: 479px){
+    .rating_review{
+        p{
+            font-size: 13px !important;
+        }
+        span{
+            font-size: 45px !important;
+        }
+    }
+    .post_content{
+        h6{
+            margin: 8px !important;
+        }
+    }
+}
+
+//TABLET RESPONISIVE
+
+@media only screen and (max-width: 996px){
+    .courses-items{
+        margin: 0 !important;
+    }
+    .post_content{
+        line-height: 9px !important;
+        a{
+            font-size: 9px !important;
+        }
+    }
+    .post_footer{
+        margin: 0 !important;
+    }
+    .tags{
+        a{
+            padding: 0 !important;
+        }
+    }
+    .widget_categories{
+        h5{
+            font-size: 17px !important;
         }
     }
 }
