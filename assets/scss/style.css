@@ -2332,7 +2332,7 @@ section {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 1349px;
+  width: 100% !important;
   height: 444px;
   -webkit-transform: translate3d(0px, -186.25px, 0px);
           transform: translate3d(0px, -186.25px, 0px);
