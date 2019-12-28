@@ -125,11 +125,21 @@
 }
 
 // CHOOSE EDUGLOBAL
+
+.f-nav{  /* To fix main menu container */
+    z-index: 9999;
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+}
 #choose-eduglobal {
     padding: 100px 0;
     position: relative;
     width: 100%;
     background-color: #4633330d;
+    
   
     .edu-text {
         h2 {

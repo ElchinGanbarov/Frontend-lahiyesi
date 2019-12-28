@@ -1,12 +1,15 @@
 
 $(document).ready(function () {
     //WINDOW SCROLLED NAVBAR FIXED TOP
+    var nav = $('#edu-global');
+
     $(window).scroll(function () {
-        if ($("html").scrollTop() > 200) {
-            $("#edu-global").addClass("fixed-top");
-            $("#edu-global").css("background-color", "white")
+        console.log($("html").scrollTop());
+        
+        if ($("html").scrollTop() > 125) {
+            nav.addClass("f-nav");
         } else {
-            $("#edu-global").removeClass("fixed-top");
+            nav.removeClass("f-nav");
         }
     });
     //ALERT-BOX CLOSED
@@ -157,6 +160,7 @@ $(document).ready(function () {
 
     // WINDOW SCROLLED BOTTOM WIEV
     $(window).scroll(function () {
+  
         if ($("html").scrollTop() > 100) {
             $(".scrollup").css("opacity", "1");
 
@@ -216,5 +220,7 @@ $(document).ready(function () {
         });
 
     });
+
+    
 
 })
